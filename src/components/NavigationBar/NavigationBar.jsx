@@ -1,12 +1,17 @@
 import './NavigationBar.scss';
 import { useState, useEffect } from 'react';
-
+import { motion } from 'framer-motion';
 import { RxHamburgerMenu as OpenMenu } from 'react-icons/rx';
 import { CgClose as HideMenu } from 'react-icons/cg';
+import { UserOutlined, LockOutlined, SettingOutlined } from '@ant-design/icons';
+import DropDown from '../Component/Dropdown/DropDown';
+import { useNavigate } from 'react-router-dom';
 
 const NavigationBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
+  const [showDrop, setShowDrop] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,23 +24,118 @@ const NavigationBar = () => {
     };
   }, []);
 
+  const handleUserProfile = () => {
+    setShowDrop(!showDrop);
+  };
+  const handleDoctorsScreen = () => {
+    navigate('/doctors');
+  };
+
+  const handlePackageScreen = () => {
+    navigate('/packages');
+  };
+
+  const handleLocationsScreen = () => {
+    navigate('/location');
+  };
+
+  const handleTreatmentScreen = () => {
+    navigate('/treatments');
+  };
+
+  const handleAboutUs = () => {
+    navigate('/aboutus');
+  };
+
+  const handleContactScreen = () => {
+    navigate('/contactus');
+  };
+
+  const handleServiceScreen = () => {
+    navigate('/services');
+  };
+
+  const data = {
+    items: [
+      {
+        key: 1,
+        label: (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.antgroup.com"
+          >
+            Profile
+          </a>
+        ),
+        icon: <UserOutlined />,
+
+        danger: false,
+      },
+      {
+        key: 2,
+        label: (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.aliyun.com"
+          >
+            Settings
+          </a>
+        ),
+        icon: <SettingOutlined />,
+      },
+      {
+        key: 3,
+        label: (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.aliyun.com"
+          >
+            Logout
+          </a>
+        ),
+        icon: <LockOutlined />,
+      },
+    ],
+    showDrop: showDrop,
+  };
+
   return (
     <>
       <nav className="navBar">
         <div className="leftSection">
           <a
-            href="#"
+            href="/"
             target={'_blank'}
             style={{ textDecoration: 'none', outline: 'none' }}
           >
             <div className="companyLogo">
-              <img src="/images/globeIcon.png" />
+              <motion.img
+                initial={{ scale: 0 }}
+                animate={{ rotate: 360, scale: 1 }}
+                transition={{
+                  duration: 3,
+                  //type: 'spring',
+                  stiffness: 260,
+                  //damping: 5,
+                }}
+                whileHover={{ scale: 1.1, rotate: 0 }}
+                whileTap={{
+                  scale: 0.8,
+                  rotate: -90,
+                  borderRadius: '100%',
+                }}
+                src="/images/logo.jpg"
+              />
               <h1>DOI DOI</h1>
             </div>
           </a>
+
           <div className="navBtns">
-            <div className="navDropdown">
-              <button>About Us</button>
+            {/* <div className="navDropdown">
+              <button onClick={handleAboutUs}>ABOUT US</button>
               <div className="aboutDropdownMenu">
                 <div className="menuItem">
                   <h3>Who We Are</h3>
@@ -85,11 +185,15 @@ const NavigationBar = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="navDropdown">
-              <button>Services</button>
-              <div className="serviceDropdownMenu">
+              </div> */}
+            {/* </div> */}
+            <button onClick={handleAboutUs}>ABOUT US</button>
+            <button onClick={handleDoctorsScreen}>OUR DOCTORS</button>
+            <button onClick={handleTreatmentScreen}>OUR TREATMENTS</button>
+            <button onClick={handlePackageScreen}>OUR PACKAGES</button>
+            {/* <div className="navDropdown"> */}
+            <button onClick={handleServiceScreen}>SERVICES</button>
+            {/* <div className="serviceDropdownMenu">
                 <div className="menuItem">
                   <h3>Service #1</h3>
                   <hr />
@@ -156,16 +260,19 @@ const NavigationBar = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <button>Community</button>
-            <button>Treatments</button>
-            <button>Bookings</button>
+            </div> */}
+            <button onClick={handleLocationsScreen}>OUR LOCATIONS</button>
+            <button onClick={handleContactScreen}>CONTACT US</button>
           </div>
         </div>
         <div className="rightSection">
           <div className="accountSection">
-            <button>Login</button>
-            <button>Sign Up</button>
+            <button>BOOKINGS</button>
+            <div className="profile_section">
+              <button onClick={handleUserProfile}>
+                <DropDown props={data} />
+              </button>
+            </div>
           </div>
           <div className="menuSection">
             {!menuOpen ? (
