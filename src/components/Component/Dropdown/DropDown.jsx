@@ -1,8 +1,8 @@
 import React from 'react';
-import { Dropdown, Space } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { Avatar, Dropdown, Space } from 'antd';
 
 const DropDown = ({ props }) => {
+  console.log(props);
   return (
     <Dropdown
       menu={{ items: props.items }}
@@ -10,9 +10,10 @@ const DropDown = ({ props }) => {
       overlayStyle={{ background: 'transparent' }}
     >
       <a onClick={(e) => e.preventDefault()}>
-        <Space>
-          <UserOutlined />
-        </Space>
+        <Avatar
+          style={{ backgroundColor: 'gray' }}
+          icon={props.icon !== null ? props.icon : null}
+        />
       </a>
     </Dropdown>
   );

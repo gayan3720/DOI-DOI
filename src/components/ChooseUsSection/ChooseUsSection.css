@@ -2,15 +2,70 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
+  min-height: 110vh;
+  background-image: url("/public/images/background3.jpg");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: -5px -10px rgb(255, 254, 254);
+  background-color: white;
+  padding-top: 50px;
+}
+.chooseUsSection span {
+  display: block;
+  font-size: 0.67em;
+  margin-block-start: 2.33em;
+  margin-block-end: 2.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.gallery-div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  height: 800px;
+  width: 80%;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: end;
+}
+.button a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+.button .divider-div {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 5px;
+  width: 100px;
+  background-color: orange;
+  left: 95.2%;
 }
 
 .sectionTitle {
-  text-align: center;
-  font-weight: bolder;
-  font-size: 60px;
-  color: rgb(15, 210, 210);
+  max-width: 600px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .reasonCards {
@@ -25,8 +80,6 @@
   flex-direction: column;
   text-align: center;
   width: 275px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   padding: 10px;
   border-radius: 15px;
@@ -82,4 +135,6 @@
   .sectionTitle {
     font-size: 55px;
   }
-}/*# sourceMappingURL=ChooseUsSection.css.map */
+}
+
+/*# sourceMappingURL=chooseUsSection.css.map */

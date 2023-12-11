@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './AboutSection.scss';
+import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   const aboutImageRef = useRef();
@@ -22,15 +23,22 @@ const AboutSection = () => {
     <section className="aboutSection">
       <div className="aboutLeft">
         <img
-          src="/images/aboutUsImage.png"
+          src="/images/image2.jpg"
           className="aboutImage"
           ref={aboutImageRef}
-          width={750}
-          height={450}
+          width={600}
+          height={400}
         />
       </div>
       <div className="aboutRight">
-        <div className="header">About Us</div>
+        <div className="img-div-aboutRight">
+          <img
+            style={{ width: '60px', height: '50px' }}
+            src="/images/26910.jpg"
+          />
+          <span style={{ fontSize: '13px' }}>BEST FOOT SPA EXPERIENCE</span>
+        </div>
+        <div className="header">WELCOME TO DOI DOI FOOT SPA</div>
         <div className="body">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -43,8 +51,12 @@ const AboutSection = () => {
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
           officia deserunt mollit anim id est laborum.
         </div>
-        <div className="button">
-          <button>Read More</button>
+        <div className="button-about">
+          <a href="#">Read More..</a>
+          <motion.div
+            whileHover={{ x: 20 }}
+            className="divider-div-about"
+          ></motion.div>
         </div>
       </div>
     </section>
