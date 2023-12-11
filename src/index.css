@@ -2,11 +2,7 @@
 
 body {
   margin: 0;
-  background-image: url('/public/images/massage-therapy-1612308_1280.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: whitesmoke;
 }
 
 .App {

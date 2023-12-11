@@ -1,35 +1,65 @@
 .serviceSection {
-  margin-top: 25px;
+  padding: 15px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  min-height: 110vh;
   gap: 1rem;
+  background-color: #ebd9cd;
+  padding-bottom: 50px;
 }
 
 .serviceText {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
+}
+.serviceText .img-div-aboutRight {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto;
+  align-items: center;
+  gap: 2px;
+}
+.serviceText .img-div-aboutRight img {
+  border-radius: 50%;
 }
 
 .motto {
-  max-width: 600px;
-  font-weight: bolder;
-  font-size: 60px;
-  color: rgb(15, 210, 210);
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+  color: #000 !important;
 }
 
 .mottoSubtitle {
-  max-width: 600px;
-  font-size: 20px;
-  color: rgb(127, 127, 127);
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 0px 200px 0px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400 !important;
+  font-size: 0.8333333333vw;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: #2e2e2e;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .serviceButtons {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  justify-content: space-between;
 }
 .serviceButtons button {
   width: 150px;
@@ -44,7 +74,8 @@
   box-shadow: 0px;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.serviceButtons button:hover, .serviceButtons button:focus {
+.serviceButtons button:hover,
+.serviceButtons button:focus {
   color: white;
   background-color: rgb(15, 210, 210);
   box-shadow: 0px 0px 12px 4px rgb(154, 239, 239);
@@ -63,6 +94,57 @@
   transform: translateY(0px);
 }
 
+.service-img-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.service-img {
+  height: 400px;
+  width: 400px;
+}
+
+.title-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title-div p {
+  font-size: 12px;
+  line-height: 15px;
+}
+.title-div a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.title-div-header {
+  font-family: "Nunito", sans-serif, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: 0.065px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+.read-more-div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.divider-div {
+  height: 5px;
+  width: 100px;
+  background-color: orange;
+}
+
 @media screen and (max-width: 1200px) {
   .serviceSection {
     margin-top: 0px;
@@ -73,9 +155,34 @@
     align-items: center;
     text-align: center;
   }
+  .serviceButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .service-img {
+    position: relative;
+    left: 210px;
+  }
 }
 @media screen and (max-width: 630px) {
   .serviceSection {
     padding: 15px;
   }
-}/*# sourceMappingURL=ServicesSection.css.map */
+  .serviceText {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .serviceButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .service-img {
+    position: relative;
+    left: 100px;
+  }
+}
+
+/*# sourceMappingURL=ServicesSection.css.map */

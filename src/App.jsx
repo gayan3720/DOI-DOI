@@ -7,12 +7,16 @@ import ReviewsSection from './components/ReviewsSection/ReviewsSection';
 import DownloadSection from './components/DownloadSection/DownloadSection';
 import Footer from './components/Footer/Footer';
 import './index.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createHashRouter,
+} from 'react-router-dom';
 import MainLayout from './assets/Layout/MainLayout';
 import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <MainLayout />,
@@ -20,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomeScreen />,
+        children: [],
       },
       {
         path: 'aboutus',

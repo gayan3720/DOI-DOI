@@ -1,23 +1,77 @@
-.chooseUsSection{
+.chooseUsSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
+  min-height: 110vh;
+  background-image: url('/public/images/background3.jpg');
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: -5px -10px rgb(256, 254, 254);
+  background-color: white;
+  padding-top: 50px;
+  span {
+    display: block;
+    font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
 }
-.sectionTitle{
-  text-align: center;
-  font-weight: bolder;
-  font-size: 60px;
-  color: rgb(15, 210, 210);
+.gallery-div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  height: 800px;
+  width: 80%;
 }
-.reasonCards{
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: end;
+  a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .divider-div {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 5px;
+    width: 100px;
+    background-color: orange;
+    left: 95.2%;
+  }
+}
+
+.sectionTitle {
+  max-width: 600px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+  color: #000;
+}
+.reasonCards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  .card{
+  .card {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -29,56 +83,56 @@
     box-shadow: 0px 4px 4px 4px rgba(127, 127, 127, 0.5);
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity 0.4s ease,
-                transform 0.4s ease;
-    .cardTitle{
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    .cardTitle {
       color: rgb(127, 127, 127);
       font-size: 30px;
       font-weight: bold;
     }
-    .cardDesc{
+    .cardDesc {
       color: rgb(127, 127, 127);
     }
   }
-  :nth-child(1){
+  :nth-child(1) {
     transition-delay: 0s;
   }
-  :nth-child(2){
+  :nth-child(2) {
     transition-delay: 0.25s;
   }
-  :nth-child(3){
+  :nth-child(3) {
     transition-delay: 0.5s;
   }
-  :nth-child(4){
+  :nth-child(4) {
     transition-delay: 0.75s;
   }
 }
-.fadeIn{
-  .card{
+
+.fadeIn {
+  .card {
     opacity: 1;
     transform: translateY(0px);
   }
-  :nth-child(1){
+  :nth-child(1) {
     transition-delay: 0s;
   }
-  :nth-child(2){
+  :nth-child(2) {
     transition-delay: 0.25s;
   }
-  :nth-child(3){
+  :nth-child(3) {
     transition-delay: 0.5s;
   }
-  :nth-child(4){
+  :nth-child(4) {
     transition-delay: 0.75s;
   }
 }
 
 //MEDIA QUERIES
 @media screen and (max-width: 630px) {
-  .chooseUsSection{
+  .chooseUsSection {
     margin-top: 30px;
     padding: 15px;
   }
-  .sectionTitle{
+  .sectionTitle {
     font-size: 55px;
   }
 }

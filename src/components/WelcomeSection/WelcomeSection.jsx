@@ -1,44 +1,55 @@
 import { useEffect, useRef } from 'react';
+import YoutubeOutlined from '@ant-design/icons/YoutubeOutlined';
 import './WelcomeSection.scss';
+import BackGround from '../../assets/images/backImage1.jpg';
 
 const WelcomeSection = () => {
-  const welcomeImageRef = useRef();
+  // const welcomeImageRef = useRef();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('fadeIn');
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-    observer.observe(welcomeImageRef.current);
+    // const observer = new IntersectionObserver(
+    //   (entries) => {
+    //     entries.forEach((entry) => {
+    //       if (entry.isIntersecting) entry.target.classList.add('fadeIn');
+    //     });
+    //   },
+    //   {
+    //     threshold: 0.000001,
+    //   }
+    // );
+    // observer.observe(welcomeImageRef.current);
   }, []);
 
   return (
     <section className="welcomeSection">
+      <div className="welcomeSection-main">
+        <img src={BackGround} alt="background" />
+      </div>
       <div className="welcomeText">
-        <div className="motto">Come Experience The Secrets Of Relaxation.</div>
-        <div className="mottoSubtitle">
+        <span>DOI DOI FOOT SPA</span>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <div className="mottos">Experience The Secrets </div>
+          <div className="mottos">Of </div>
+          <div className="mottos">Relaxation</div>
+        </div>
+        {/* <div className="mottoSubtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        </div> */}
         <div className="welcomeButtons">
-          <button>Learn More</button>
-          <button>Watch Intro Video</button>
+          <button>
+            <div>
+              <YoutubeOutlined style={{ fontSize: '20px', color: '#3A2D28' }} />
+            </div>
+            <div>Watch Video</div>
+          </button>
         </div>
-      </div>
-      <div className="imageSection">
-        <img
-          src="/images/welcomeImage.png"
-          className="welcomeImage"
-          ref={welcomeImageRef}
-          width={576 * 1.1}
-          height={360 * 1.1}
-        />
       </div>
     </section>
   );

@@ -1,78 +1,82 @@
-import { useEffect, useRef } from 'react'
-import './ChooseUsSection.scss'
+import './ChooseUsSection.scss';
+import Slider0 from '../../assets/images/slide0.jpg';
+import Slider1 from '../../assets/images/slider1.jpg';
+import Slider2 from '../../assets/images/slider2.jpg';
+import Slider3 from '../../assets/images/slider3.jpg';
+import Slider4 from '../../assets/images/slider4.jpg';
+import Slider5 from '../../assets/images/slider5.jpg';
+import Slider6 from '../../assets/images/slider6.jpg';
+import Slider7 from '../../assets/images/slider7.jpg';
+import ImageSlider from '../Component/ImageSlider/ImageSlider';
+import { motion } from 'framer-motion';
 
-import { AiOutlineBarChart as Chart } from 'react-icons/ai'
-import { RiComputerLine as Service } from 'react-icons/ri'
-import { MdSupportAgent as Support} from 'react-icons/md'
-import { FaPeopleCarry as Community } from 'react-icons/fa'
+const images = [
+  {
+    id: 0,
+    name: Slider0,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 1,
+    name: Slider1,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 2,
+    name: Slider2,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 3,
+    name: Slider3,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 4,
+    name: Slider4,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 5,
+    name: Slider5,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 6,
+    name: Slider6,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+  {
+    id: 7,
+    name: Slider7,
+    details:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo saepe dolores laborum aperiam non, labore quidem, dicta, error eos officiis laudantium. Adipisci, ullam dolorem quasi inventore possimus aliquid repellendus totam quidem similique!',
+  },
+];
 
 const ChooseUsSection = () => {
-  const cardsRef = useRef()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting)
-          entry.target.classList.add("fadeIn")
-      })
-    }, {
-      threshold: 0.5
-    })
-    observer.observe(cardsRef.current)
-  }, [])
-
   return (
     <section className="chooseUsSection">
-      <div className="sectionTitle">
-        Why Choose Us
-      </div>
-      <div className="reasonCards" ref={cardsRef}>
-        <div className="card">
-          <div className="cardSymbol">
-            <Chart size={'100px'} color={'rgb(127, 127, 127)'}/>
-          </div>
-          <div className="cardTitle">
-            Management & Marketing
-          </div>
-          <div className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </div>
-        </div>
-        <div className="card">
-          <div className="cardSymbol">
-            <Service size={'100px'} color={'rgb(127, 127, 127)'}/>
-          </div>
-          <div className="cardTitle">
-            High Quality Service
-          </div>
-          <div className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </div>
-        </div>
-        <div className="card">
-          <div className="cardSymbol">
-            <Community size={'100px'} color={'rgb(127, 127, 127)'}/>
-          </div>
-          <div className="cardTitle">
-            A Strong, Growing Community
-          </div>
-          <div className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-          </div>
-        </div>
-        <div className="card">
-          <div className="cardSymbol">
-            <Support size={'100px'} color={'rgb(127, 127, 127)'}/>
-          </div>
-          <div className="cardTitle">
-            24/7 Customer Support
-          </div>
-          <div className="cardDesc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </div>
+      <span>DISCOVER OUR COMPLETELY CUSTOMIZABLE AYURVEDA TREATMENTS</span>
+      <div className="sectionTitle">OUR CUSTOMIZED PACKAGES</div>
+      <div className="gallery-div">
+        <ImageSlider images={images} />
+        <div className="button">
+          <a href="#">View All..</a>
+          <motion.div
+            whileHover={{ x: 20 }}
+            className="divider-div"
+          ></motion.div>
         </div>
       </div>
     </section>
-  )
-}
-export default ChooseUsSection
+  );
+};
+export default ChooseUsSection;

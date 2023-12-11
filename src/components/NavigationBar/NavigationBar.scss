@@ -1,5 +1,15 @@
 //VARIABLES
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Teko:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 $sideMenuGap: 2rem;
+$logoFont: 'Permanent Marker', cursive;
+$normalFont: 'Teko', sans-serif;
+$navBtnFont: 'Montserrat', sans-serif;
+$rubikBubbles: 'Rubik Bubbles';
+$Montserrat: 'Montserrat';
 
 hr {
   border: 0.5px solid rgba(169, 169, 169, 0.438);
@@ -11,23 +21,51 @@ hr {
   top: 0;
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between; //
   align-items: center;
-  background-color: rgba(54, 51, 51, 0.2);
+  background-color: rgba(58, 45, 40, 0.6);
   border-bottom-style: solid;
-  border-bottom-color: rgb(239, 239, 239);
-  padding-left: 50px;
-  padding-right: 50px;
+  border-bottom-color: rgba(239, 239, 239, 0.4);
+  // padding-left: 50px;
+  // padding-right: 50px;
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
-  z-index: 1;
+  height: 135px;
+  z-index: 2;
+  gap: 0;
 }
-
+.header-main {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(58, 45, 40);
+}
+.header-div {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-family: $normalFont;
+  color: white;
+  font-weight: bolder;
+}
+.leftSection-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 //LEFT SECTION OF NAVBAR
 .leftSection {
   display: flex;
   align-items: center;
   gap: 2rem;
+  height: 100%;
 }
 
 //COMPANY LOGO
@@ -35,23 +73,28 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.7rem;
   width: max-content;
   height: max-content;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family: $Montserrat;
+  font-size: 28px;
 }
 .companyLogo:hover {
   cursor: pointer;
+
   h1 {
-    color: rgb(15, 210, 210);
+    color: rgb(255, 252, 252);
+    font-size: 43px;
+    text-shadow: 0px 0px 12px rgb(256, 235, 245);
   }
 }
 a:focus > .companyLogo > h1 {
   color: rgb(15, 210, 210);
 }
 .companyLogo h1 {
-  color: rgb(12, 12, 12);
+  color: rgb(255, 252, 252);
   user-select: none;
   margin: 0;
   font-weight: bolder;
@@ -61,7 +104,10 @@ a:focus > .companyLogo > h1 {
   user-select: none;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 30%;
+}
+.companyLogo img:hover {
+  box-shadow: 0px 0px 12px 4px rgb(256, 235, 245);
 }
 
 //NAV DROPDOWNS
@@ -71,21 +117,24 @@ a:focus > .companyLogo > h1 {
   gap: 0.5rem;
 }
 .navBtns button {
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-family: $navBtnFont;
+  font-size: 11px;
   font-weight: 900;
-  color: rgb(251, 248, 248);
+  color: rgb(255, 252, 252);
   background-color: transparent;
   outline: none;
   user-select: none;
-  height: 80px;
+  height: 25px;
+  border-radius: 20px;
   border: none;
   transition: color 0.2s ease-in-out;
 }
 .navBtns button:hover,
 .navBtns button:focus {
   cursor: pointer;
-  color: rgb(15, 210, 210);
+  color: rgba(255, 252, 252);
+  font-size: 12px;
+  box-shadow: 0px 0px 20px rgb(255, 252, 252);
 }
 .navDropdown {
   display: flex;
@@ -142,7 +191,7 @@ a:focus > .companyLogo > h1 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 //LOGIN/SIGN UP SECTION
@@ -150,18 +199,20 @@ a:focus > .companyLogo > h1 {
   display: flex;
   gap: 1rem;
   align-items: center;
+  width: 125px;
 }
 
 .accountSection button {
-  width: 125px;
-  height: 35px;
+  //width: 125px;
+  height: 25px;
+  border-radius: 20px;
   cursor: pointer;
   // user-select: none;
   outline: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
-  font-weight: bolder;
-  color: rgb(253, 251, 251);
+  font-family: $navBtnFont;
+  font-size: 11px;
+  font-weight: 900;
+  color: rgb(253, 253, 253);
   background-color: transparent;
   border: none;
   border-radius: 50px;
@@ -170,7 +221,10 @@ a:focus > .companyLogo > h1 {
 }
 .accountSection button:hover,
 .accountSection button:focus {
-  color: rgb(15, 210, 210);
+  color: rgb(253, 253, 253);
+  box-shadow: 0px 0px 20px rgb(255, 252, 252);
+  font-size: 12px;
+
   // background-color: rgb(15, 210, 210);
   // border-color: rgb(15, 210, 210);
 }
@@ -183,19 +237,21 @@ a:focus > .companyLogo > h1 {
 .profile_section button {
   width: 50px;
   height: 50px;
-  background-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127) !important;
 }
 
 //MENU SECTION & BUTTON
 .menuSection {
   display: none;
+  height: 50px;
+  width: 50px;
 }
 .menuBtn,
 .hideBtn {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  color: rgb(162, 162, 162);
+  color: rgb(22, 12, 12);
 }
 
 //SIDE MENU
@@ -207,12 +263,14 @@ a:focus > .companyLogo > h1 {
   bottom: 0;
   right: 0;
   width: 350px;
-  height: 85.1%;
+  height: 82.1%;
   padding: 15px;
   border: 1px solid transparent;
-  border-left-color: rgb(239, 239, 239);
-  background-color: white;
-  box-shadow: -10px 2px 4px 0px rgba(217, 217, 217, 0.39);
+  border-radius: 10px;
+
+  // border-left-color: rgb(239, 239, 239);
+  background-color: rgba(169, 169, 169, 0.438);
+  box-shadow: none;
   h1 {
     color: rgb(162, 162, 162);
     user-select: none;
@@ -223,12 +281,14 @@ a:focus > .companyLogo > h1 {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+
   // gap: 20rem;
 }
 .sideMenuSiteSections {
   display: none;
   flex-direction: column;
   gap: 3rem;
+
   button {
     cursor: pointer;
     background-color: white;
@@ -281,23 +341,40 @@ a:focus > .companyLogo > h1 {
   justify-content: center;
 }
 
+.ant-avatar-string {
+  height: 100% !important;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 //MEDIA QUERIES
 @media only screen and (max-width: 1200px) {
   .sideMenu {
     display: flex;
   }
+  .sideMenuContent {
+    display: flex;
+    gap: 1rem;
+  }
   .loginSignUpSection {
-    gap: 24rem;
+    gap: 1rem;
   }
   .menuSection {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .menuBtn,
   .hideBtn {
     margin-top: 10px;
   }
-  .accountSection {
+  .accountSection_btn {
     display: none;
+  }
+  .disclaimer {
+    padding: 0 0 0 0 !important;
   }
 }
 @media only screen and (max-width: 985px) {
@@ -309,6 +386,13 @@ a:focus > .companyLogo > h1 {
   }
   .navBtns {
     display: none;
+  }
+
+  .leftSection-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 /*For Mobile*/
@@ -326,8 +410,8 @@ a:focus > .companyLogo > h1 {
     gap: 1rem;
   }
   .navBar {
-    padding-left: 15px;
-    padding-right: 20px;
+    //padding-left: 15px;
+    padding-right: 15px;
   }
   .accountSection {
     display: none;
