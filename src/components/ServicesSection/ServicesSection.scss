@@ -154,8 +154,12 @@
     flex-direction: column;
     gap: 10px;
   }
+  .service-img-div {
+    display: flex;
+    align-items: center;
+  }
   .service-img {
-    position: relative;
+    position: static;
     left: 210px;
   }
   .read-more-div {
@@ -165,7 +169,7 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 425px) {
   .serviceSection {
     padding: 15px;
   }
@@ -181,10 +185,13 @@
 
     gap: 10px;
   }
-
+  .service-img-div {
+    display: flex;
+    align-items: center;
+  }
   .service-img {
     position: relative;
-    left: 125px;
+    left: 5px;
   }
   .read-more-div {
     display: flex;

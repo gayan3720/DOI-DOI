@@ -396,7 +396,7 @@ a:focus > .companyLogo > h1 {
   }
 }
 /*For Mobile*/
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 425px) {
   .sideMenuSiteSections {
     margin-top: 10px;
     gap: 2rem;
@@ -411,7 +411,7 @@ a:focus > .companyLogo > h1 {
   }
   .navBar {
     //padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 0px;
   }
   .accountSection {
     display: none;

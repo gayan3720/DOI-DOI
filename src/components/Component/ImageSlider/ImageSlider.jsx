@@ -29,11 +29,12 @@ const ImageSlider = ({ images }) => {
         modules={[Autoplay, Pagination, Navigation, Zoom]}
         className="mySwiper"
         breakpoints={{
-          685: {
+          425: {
             slidesPerView: 1,
+            spaceBetween: 50,
           },
           985: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 50,
           },
         }}
