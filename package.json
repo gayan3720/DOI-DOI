@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gayan3720.github.io/DOI-DOI",
+  "homepage": "https://gayan3720.github.io/DOI-DOI/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

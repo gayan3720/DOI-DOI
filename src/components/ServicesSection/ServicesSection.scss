@@ -158,8 +158,14 @@
     position: relative;
     left: 210px;
   }
+  .read-more-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
 }
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 630px) {
   .serviceSection {
     padding: 15px;
   }
@@ -175,9 +181,10 @@
 
     gap: 10px;
   }
+
   .service-img {
     position: relative;
-    left: 100px;
+    left: 125px;
   }
   .read-more-div {
     display: flex;
