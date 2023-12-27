@@ -159,7 +159,7 @@
     left: 210px;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 685px) {
   .serviceSection {
     padding: 15px;
   }
@@ -178,5 +178,11 @@
   .service-img {
     position: relative;
     left: 100px;
+  }
+  .read-more-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
   }
 }

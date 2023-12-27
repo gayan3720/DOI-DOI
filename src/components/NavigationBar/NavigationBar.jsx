@@ -286,22 +286,21 @@ const NavigationBar = () => {
               <div className="companyLogo">
                 <motion.img
                   initial={{ scale: 0 }}
-                  animate={{ rotate: 360, scale: 1 }}
+                  animate={{ scale: 1 }}
                   transition={{
                     duration: 0.5,
                     //type: 'spring',
                     stiffness: 260,
                     //damping: 5,
                   }}
-                  whileHover={{ scale: 1.3, rotate: 0 }}
+                  whileHover={{ scale: 1.1, rotate: 0 }}
                   whileTap={{
                     scale: 0.8,
                     rotate: -90,
                     borderRadius: '100%',
                   }}
-                  src="/images/logo.jpg"
+                  src="/images/doilogo.jpg"
                 />
-                <h1>DOI DOI</h1>
               </div>
             </a>
 

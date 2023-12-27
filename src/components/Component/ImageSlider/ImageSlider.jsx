@@ -11,7 +11,7 @@ const ImageSlider = ({ images }) => {
   return (
     <>
       <Swiper
-        spaceBetween={5}
+        spaceBetween={50}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
@@ -28,6 +28,15 @@ const ImageSlider = ({ images }) => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation, Zoom]}
         className="mySwiper"
+        breakpoints={{
+          685: {
+            slidesPerView: 1,
+          },
+          985: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+        }}
       >
         {images.map((i) => (
           <SwiperSlide key={i.id}>
