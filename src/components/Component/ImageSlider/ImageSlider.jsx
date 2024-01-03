@@ -11,7 +11,7 @@ const ImageSlider = ({ images }) => {
   return (
     <>
       <Swiper
-        spaceBetween={50}
+        spaceBetween={25}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
@@ -34,8 +34,8 @@ const ImageSlider = ({ images }) => {
             spaceBetween: 50,
           },
           985: {
-            slidesPerView: 1,
-            spaceBetween: 50,
+            slidesPerView: 2,
+            spaceBetween: 25,
           },
         }}
       >

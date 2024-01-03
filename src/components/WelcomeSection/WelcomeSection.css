@@ -1,28 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Teko:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 .welcomeSection {
-  margin-top: 125px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  display: block;
+  position: relative;
+  z-index: 0;
+  background-color: rgb(235, 227, 219);
+  min-height: 110vh;
+  background-color: rgba(254, 254, 245, 0.6);
+}
+
+.welcomeSection-main img {
+  position: absolute;
+  z-index: 1;
+  height: 110vh;
+  width: 100%;
 }
 
 .welcomeText {
+  top: 40%;
+  left: 40%;
+  position: absolute;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.welcomeText span {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 45px;
+  letter-spacing: 6.5px;
+  text-transform: uppercase;
+  color: rgb(58, 45, 40);
+  margin-bottom: 30px;
 }
 
-.motto {
+.mottos-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mottos {
   max-width: 600px;
-  font-weight: bolder;
-  font-size: 60px;
-  color: rgb(15, 210, 210);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 24px !important;
+  line-height: 28px;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+  color: rgb(58, 45, 40) !important;
 }
 
 .mottoSubtitle {
   max-width: 600px;
   font-size: 20px;
+  font-weight: bold !important;
+  color: rgb(7, 7, 7) !important;
 }
 
 .welcomeButtons {
@@ -31,24 +71,38 @@
   gap: 1rem;
 }
 .welcomeButtons button {
-  width: 150px;
-  height: 45px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-content: center;
+  width: 200px;
+  height: 60px;
   cursor: pointer;
-  font-family: 'Lato', sans-serif;
-  font-size: medium;
-  border: 1px solid rgb(15, 210, 210);
-  border-radius: 50px;
-  color: rgb(127, 127, 127);
-  background-color: white;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 0.325px;
+  text-transform: uppercase;
+  color: rgb(58, 45, 40);
+  padding-left: 8px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
   box-shadow: 0px;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .welcomeButtons button:hover,
 .welcomeButtons button:focus {
-  color: white;
-  background-color: rgb(15, 210, 210);
-  box-shadow: 0px 0px 12px 4px rgb(154, 239, 239);
+  color: rgb(58, 45, 40);
+  font-size: 16px;
+  background-color: transparent;
 }
 
 .welcomeImage {
@@ -66,18 +120,40 @@
 
 @media screen and (max-width: 1300px) {
   .welcomeSection {
-    margin-top: 100px;
     flex-direction: column;
   }
   .welcomeText {
     display: flex;
     align-items: center;
     text-align: center;
+    left: 30%;
+  }
+  .welcomeSection-main img {
+    width: 100%;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 320px) {
   .welcomeSection {
-    margin-top: 75px;
-    padding: 15px;
+    padding-right: 15px;
+    width: 100%;
   }
-} /*# sourceMappingURL=WelcomeSection.css.map */
+  .welcomeText {
+    left: 2%;
+  }
+  .welcomeSection-main {
+    width: 100%;
+  }
+  .welcomeSection-main img {
+    width: 100%;
+  }
+  .mottos-div {
+    align-items: center;
+    justify-content: center;
+  }
+  .mottos {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=WelcomeSection.css.map */

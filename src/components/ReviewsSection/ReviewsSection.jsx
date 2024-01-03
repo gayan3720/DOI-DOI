@@ -1,85 +1,50 @@
-import { useRef, useState } from "react"
-import './ReviewsSection.scss'
+import { useRef, useState } from 'react';
+import './ReviewsSection.scss';
 
 const ReviewsSection = () => {
   return (
     <section className="reviewsSection">
       <div className="reviewTextSection">
-        <div className="reviewSectionTitle">
-          Reviews
-        </div>
-        <div className="reviewSectionSubtitle">
-          Have a look at what some of our customers are saying about us!
+        <div className="img-div-aboutRight">
+          <img
+            style={{ width: '60px', height: '50px' }}
+            src="/images/26910.jpg"
+          />
+          <span style={{ fontSize: '13px' }}>
+            HEAL AND REINVIGORATE YOURSELF WITH THE BEST AYURWEDA THREATMENTS IN
+            SRI LANKA
+          </span>
+
+          <div className="header">OUR AYURWEDA THREATMENTS</div>
         </div>
       </div>
       <div className="allReviews">
-        <div className="review">
-          <div className="profilePic">
-            <img src="/images/profPic1.png" />
-          </div>
-          <div className="reviewText">
-            <div className="reviewerName">
-              David Wilson
-            </div>
-            <div className="reviewerLocation">
-              San Francisco, CA
-            </div>
-            <div className="reviewerReview">
-              <em>"I have been a customer of this company for years and have always been extremely satisfied with their products and services. The staff is friendly and helpful, and they always go above and beyond to make sure I have everything I need. Highly recommend!"</em>
-            </div>
-          </div>
+        <div className="left-section">
+          <img src="/images/massage-therapy-1612308_1280.jpg" alt="image" />
         </div>
-        <div className="review">
-          <div className="profilePic">
-            <img src="/images/profPic2.png" />
+        <div className="right-section">
+          <div className="card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            doloribus, nam, modi dolor voluptatem odio beatae quod dolorem
+            cupiditate fuga tenetur recusandae error, expedita laborum nobis
+            laudantium doloremque? Autem, aspernatur.
           </div>
-          <div className="reviewText">
-            <div className="reviewerName">
-              Sarah Lee
-            </div>
-            <div className="reviewerLocation">
-              Seattle, WA
-            </div>
-            <div className="reviewerReview">
-              <em>"I have been a customer of this company for years and have always been extremely satisfied with their products and services. The staff is friendly and helpful, and they always go above and beyond to make sure I have everything I need. Highly recommend!"</em>
-            </div>
+          <div className="card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            libero nihil officia vitae quae? Repudiandae repellat cupiditate
+            deserunt, unde expedita ducimus voluptatibus doloremque!
+            Exercitationem excepturi, autem cupiditate saepe reprehenderit nisi.
           </div>
-        </div>
-        <div className="review">
-          <div className="profilePic">
-            <img src="/images/profPic3.png" />
-          </div>
-          <div className="reviewText">
-            <div className="reviewerName">
-              Frank Jones
-            </div>
-            <div className="reviewerLocation">
-              Houston, TX
-            </div>
-            <div className="reviewerReview">
-              <em>"I have had nothing but positive experiences with this company. They have always been prompt and efficient, and the products I have purchased from them have exceeded my expectations. I will definitely be a repeat customer!"</em>
-            </div>
-          </div>
-        </div>
-        <div className="review">
-          <div className="profilePic">
-            <img src="/images/profPic4.png" />
-          </div>
-          <div className="reviewText">
-            <div className="reviewerName">
-              Samantha Smith
-            </div>
-            <div className="reviewerLocation">
-              Austin, TX
-            </div>
-            <div className="reviewerReview">
-              <em>"I was blown away by the level of service I received from this company. They were extremely knowledgeable and helped me find exactly what I was looking for. I will definitely be using them again in the future."</em>
-            </div>
+          <div className="card-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga,
+            mollitia? Nulla sit ipsam dolore quisquam possimus sunt, optio iure
+            iusto molestiae magni perspiciatis nihil ab fugiat nostrum, officia
+            tempora. Fuga.
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ReviewsSection
+export default ReviewsSection;

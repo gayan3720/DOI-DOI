@@ -27,13 +27,7 @@ const WelcomeSection = () => {
       </div>
       <div className="welcomeText">
         <span>DOI DOI FOOT SPA</span>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
+        <div className="mottos-div">
           <div className="mottos">Experience The Secrets </div>
           <div className="mottos">Of </div>
           <div className="mottos">Relaxation</div>

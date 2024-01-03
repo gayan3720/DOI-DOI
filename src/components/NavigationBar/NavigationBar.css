@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Teko:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 hr {
   border: 0.5px solid rgba(169, 169, 169, 0.438);
   border-radius: 50px;
@@ -9,35 +11,64 @@ hr {
   top: 0;
   position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(54, 51, 51, 0.3);
+  background-color: rgba(58, 45, 40, 0.6);
   border-bottom-style: solid;
-  border-bottom-color: rgb(239, 239, 239);
-  padding-left: 50px;
-  padding-right: 50px;
+  border-bottom-color: rgba(239, 239, 239, 0.4);
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
-  z-index: 1;
-  gap: 10px;
+  height: 135px;
+  z-index: 2;
+  gap: 0;
+}
+
+.header-main {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58, 45, 40);
+}
+
+.header-div {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-family: "Teko", sans-serif;
+  color: white;
+  font-weight: bolder;
+}
+
+.leftSection-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .leftSection {
   display: flex;
   align-items: center;
   gap: 2rem;
+  height: 100%;
 }
 
 .companyLogo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.7rem;
   width: max-content;
   height: max-content;
   margin-top: 15px;
   margin-bottom: 15px;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Montserrat";
   font-size: 28px;
 }
 
@@ -45,7 +76,9 @@ hr {
   cursor: pointer;
 }
 .companyLogo:hover h1 {
-  color: #de04d7;
+  color: rgb(255, 252, 252);
+  font-size: 43px;
+  text-shadow: 0px 0px 12px rgb(255, 235, 245);
 }
 
 a:focus > .companyLogo > h1 {
@@ -53,7 +86,7 @@ a:focus > .companyLogo > h1 {
 }
 
 .companyLogo h1 {
-  color: rgb(12, 12, 12);
+  color: rgb(255, 252, 252);
   user-select: none;
   margin: 0;
   font-weight: bolder;
@@ -62,9 +95,13 @@ a:focus > .companyLogo > h1 {
 
 .companyLogo img {
   user-select: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 200px;
+  height: 90px;
+  border-radius: 2%;
+}
+
+.companyLogo img:hover {
+  box-shadow: 0px 0px 12px 4px rgb(255, 235, 245);
 }
 
 .navBtns {
@@ -74,14 +111,15 @@ a:focus > .companyLogo > h1 {
 }
 
 .navBtns button {
-  font-family: "Black Ops One";
-  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
   font-weight: 900;
   color: rgb(255, 252, 252);
   background-color: transparent;
   outline: none;
   user-select: none;
-  height: 80px;
+  height: 25px;
+  border-radius: 20px;
   border: none;
   transition: color 0.2s ease-in-out;
 }
@@ -89,7 +127,9 @@ a:focus > .companyLogo > h1 {
 .navBtns button:hover,
 .navBtns button:focus {
   cursor: pointer;
-  color: #de04d7;
+  color: rgb(255, 252, 252);
+  font-size: 12px;
+  box-shadow: 0px 0px 20px rgb(255, 252, 252);
 }
 
 .navDropdown {
@@ -154,23 +194,25 @@ a:focus > .companyLogo > h1 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .accountSection {
   display: flex;
   gap: 1rem;
   align-items: center;
+  width: 125px;
 }
 
 .accountSection button {
-  width: 125px;
-  height: 35px;
+  height: 25px;
+  border-radius: 20px;
   cursor: pointer;
   outline: none;
-  font-family: "Black Ops One";
-  font-size: 13px;
-  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 900;
   color: rgb(253, 253, 253);
   background-color: transparent;
   border: none;
@@ -180,7 +222,9 @@ a:focus > .companyLogo > h1 {
 
 .accountSection button:hover,
 .accountSection button:focus {
-  color: #de04d7;
+  color: rgb(253, 253, 253);
+  box-shadow: 0px 0px 20px rgb(255, 252, 252);
+  font-size: 12px;
 }
 
 .profile_section {
@@ -191,7 +235,7 @@ a:focus > .companyLogo > h1 {
 .profile_section button {
   width: 50px;
   height: 50px;
-  background-color: rgb(127, 127, 127);
+  background-color: rgb(127, 127, 127) !important;
 }
 
 .menuSection {
@@ -338,9 +382,15 @@ a:focus > .companyLogo > h1 {
   .navBtns {
     display: none;
   }
+  .leftSection-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 /*For Mobile*/
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 500px) {
   .sideMenuSiteSections {
     margin-top: 10px;
     gap: 2rem;
@@ -354,8 +404,7 @@ a:focus > .companyLogo > h1 {
     gap: 1rem;
   }
   .navBar {
-    padding-left: 15px;
-    padding-right: 20px;
+    padding-right: 0px;
   }
   .accountSection {
     display: none;

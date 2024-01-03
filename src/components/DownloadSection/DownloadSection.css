@@ -1,10 +1,10 @@
 .downloadSection {
-  margin-top: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  background-color: #ebd9cd;
 }
 
 .downloadText {
@@ -33,11 +33,7 @@
   gap: 1rem;
 }
 .downloadButtons button {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   cursor: pointer;
   font-size: medium;
@@ -74,4 +70,6 @@
   .downloadSection {
     padding: 15px;
   }
-}/*# sourceMappingURL=DownloadSection.css.map */
+}
+
+/*# sourceMappingURL=DownloadSection.css.map */

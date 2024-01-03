@@ -191,7 +191,8 @@ a:focus > .companyLogo > h1 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: center;
 }
 
 //LOGIN/SIGN UP SECTION
@@ -204,6 +205,7 @@ a:focus > .companyLogo > h1 {
 
 .accountSection button {
   //width: 125px;
+
   height: 25px;
   border-radius: 20px;
   cursor: pointer;
