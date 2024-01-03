@@ -1,16 +1,19 @@
 .aboutSection {
-  margin-top: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  padding: 20px;
   align-items: center;
   gap: 1rem;
+  background-color: #ebd9cd;
+  min-height: 110vh;
 }
 
 .aboutImage {
+  flex: 1;
   max-width: 100%;
   height: auto;
   opacity: 0;
+  padding: 10px;
   transform: translateX(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -21,42 +24,67 @@
 }
 
 .aboutRight {
+  flex: 1;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4b2a7;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+.aboutRight .img-div-aboutRight {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto;
+  align-items: center;
+}
+.aboutRight .img-div-aboutRight img {
+  border-radius: 50%;
 }
 
 .header {
   max-width: 600px;
-  font-weight: bolder;
-  font-size: 60px;
-  color: rgb(15, 210, 210);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .body {
+  display: flex;
+  align-items: center;
   width: 450px;
-  font-size: 20px;
-  color: rgb(127, 127, 127);
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 0.8333333333vw;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: #2e2e2e;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.button button {
-  width: 125px;
-  height: 45px;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  font-size: medium;
-  border: 1px solid rgb(15, 210, 210);
-  border-radius: 50px;
-  color: rgb(127, 127, 127);
-  background-color: white;
-  box-shadow: 0px;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+.button-about {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
 }
-
-.button button:hover, .button button:focus {
-  color: white;
-  background-color: rgb(15, 210, 210);
-  box-shadow: 0px 0px 12px 4px rgb(154, 239, 239);
+.button-about a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+.button-about .divider-div-about {
+  height: 5px;
+  width: 100px;
+  background-color: orange;
 }
 
 @media screen and (max-width: 1200px) {
@@ -72,8 +100,14 @@
     width: 80%;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 320px) {
   .aboutSection {
     padding: 15px;
   }
-}/*# sourceMappingURL=AboutSection.css.map */
+  .body {
+    font-size: 12px;
+    line-height: 2px;
+  }
+}
+
+/*# sourceMappingURL=AboutSection.css.map */

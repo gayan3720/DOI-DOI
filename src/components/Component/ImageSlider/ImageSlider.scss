@@ -39,3 +39,12 @@
   align-items: center;
   //   height: 50px;
 }
+@media screen and (max-width: 320px) {
+  .swiper-slide span {
+    height: 100px;
+    line-height: 16px;
+    font-size: 8px;
+    font-weight: 700;
+    text-align: center;
+  }
+}

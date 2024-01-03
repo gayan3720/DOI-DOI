@@ -1,33 +1,33 @@
-.downloadSection{
-  margin-top: 50px;
+.downloadSection {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  background-color: #ebd9cd;
 }
-.downloadText{
+.downloadText {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.downloadTitle{
+.downloadTitle {
   max-width: 600px;
   font-weight: bolder;
   font-size: 60px;
   color: rgb(15, 210, 210);
 }
-.downloadSubtitle{
+.downloadSubtitle {
   max-width: 600px;
   font-size: 20px;
   color: rgb(127, 127, 127);
 }
-.downloadButtons{
+.downloadButtons {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  button{
+  button {
     width: max-content;
     height: max-content;
     cursor: pointer;
@@ -36,13 +36,12 @@
     background-color: transparent;
   }
 }
-.downloadImage{
+.downloadImage {
   max-width: 100%;
   height: auto;
   opacity: 0;
   transform: translateX(-20px);
-  transition: opacity 0.6s ease,
-              transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fadeIn {
@@ -52,19 +51,19 @@
 
 //MEDIA QUERIES
 @media screen and (max-width: 1300px) {
-  .downloadSection{
+  .downloadSection {
     margin-top: 0px;
     flex-direction: column-reverse;
     gap: 2rem;
   }
-  .downloadText{
+  .downloadText {
     display: flex;
     align-items: center;
     text-align: center;
   }
 }
 @media screen and (max-width: 630px) {
-  .downloadSection{
+  .downloadSection {
     padding: 15px;
   }
 }

@@ -21,7 +21,7 @@ const NavigationBar = () => {
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
-      console.log(window.innerWidth, '---');
+
       window.innerWidth > 1200 && setMenuOpen(false);
     };
     window.addEventListener('resize', handleResize);
@@ -382,11 +382,6 @@ const NavigationBar = () => {
             <div className="accountSection">
               <div className="accountSection_btn">
                 <button>BOOKINGS</button>
-              </div>
-              <div className="profile_section">
-                <button onClick={handleUserProfile}>
-                  <DropDown props={profileData} />
-                </button>
               </div>
             </div>
           </div>
