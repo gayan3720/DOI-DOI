@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import './DownloadSection.scss';
+import { useEffect, useRef } from "react";
+import "./DownloadSection.scss";
 
 const DownloadSection = () => {
   const downloadImageRef = useRef();
@@ -8,7 +8,7 @@ const DownloadSection = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('fadeIn');
+          if (entry.isIntersecting) entry.target.classList.add("fadeIn");
         });
       },
       {
@@ -23,6 +23,7 @@ const DownloadSection = () => {
       <img
         ref={downloadImageRef}
         src="/images/massage-therapy-1612308_1280.jpg"
+        className="downloadImage"
       />
     </section>
   );

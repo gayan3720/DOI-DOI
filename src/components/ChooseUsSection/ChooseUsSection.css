@@ -10,7 +10,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: -5px -10px rgb(255, 254, 254);
   background-color: white;
   padding-top: 50px;
 }
@@ -127,14 +126,34 @@
   transition-delay: 0.75s;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 320px) {
   .chooseUsSection {
     margin-top: 30px;
     padding: 15px;
+    align-items: center;
+  }
+  span {
+    text-align: center;
   }
   .sectionTitle {
-    font-size: 55px;
+    text-align: center;
   }
 }
+.read-more-div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.read-more-div a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
 
-/*# sourceMappingURL=chooseUsSection.css.map */
+.divider-div {
+  height: 5px;
+  width: 100px;
+  background-color: orange;
+}
+
+/*# sourceMappingURL=ChooseUsSection.css.map */

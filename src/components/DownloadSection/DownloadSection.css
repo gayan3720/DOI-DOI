@@ -5,6 +5,8 @@
   justify-content: center;
   gap: 1rem;
   background-color: #ebd9cd;
+  margin: 0;
+  padding: 0;
 }
 
 .downloadText {
@@ -42,7 +44,7 @@
 }
 
 .downloadImage {
-  max-width: 100%;
+  width: 1500px;
   height: auto;
   opacity: 0;
   transform: translateX(-20px);

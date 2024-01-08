@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react';
-import './ReviewsSection.scss';
+import { useRef, useState } from "react";
+import "./ReviewsSection.scss";
+import { motion } from "framer-motion";
 
 const ReviewsSection = () => {
   return (
@@ -7,10 +8,10 @@ const ReviewsSection = () => {
       <div className="reviewTextSection">
         <div className="img-div-aboutRight">
           <img
-            style={{ width: '60px', height: '50px' }}
+            style={{ width: "60px", height: "50px" }}
             src="/images/26910.jpg"
           />
-          <span style={{ fontSize: '13px' }}>
+          <span style={{ fontSize: "13px" }}>
             HEAL AND REINVIGORATE YOURSELF WITH THE BEST AYURWEDA THREATMENTS IN
             SRI LANKA
           </span>
@@ -20,26 +21,58 @@ const ReviewsSection = () => {
       </div>
       <div className="allReviews">
         <div className="left-section">
-          <img src="/images/massage-therapy-1612308_1280.jpg" alt="image" />
+          <img
+            src="/images/massage-therapy-1612308_1280.jpg"
+            alt="image"
+            className="therapy-image"
+          />
         </div>
         <div className="right-section">
           <div className="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            doloribus, nam, modi dolor voluptatem odio beatae quod dolorem
-            cupiditate fuga tenetur recusandae error, expedita laborum nobis
-            laudantium doloremque? Autem, aspernatur.
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis doloribus, nam, modi dolor voluptatem odio beatae quod
+              dolorem cupiditate fuga tenetur recusandae error, expedita laborum
+              nobis laudantium doloremque? Autem, aspernatur.
+            </div>
+            <div className="read-more-div-review">
+              <a href="#">Read More..</a>
+              <motion.div
+                whileHover={{ x: 20 }}
+                className="divider-div"
+              ></motion.div>
+            </div>
           </div>
           <div className="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            libero nihil officia vitae quae? Repudiandae repellat cupiditate
-            deserunt, unde expedita ducimus voluptatibus doloremque!
-            Exercitationem excepturi, autem cupiditate saepe reprehenderit nisi.
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis doloribus, nam, modi dolor voluptatem odio beatae quod
+              dolorem cupiditate fuga tenetur recusandae error, expedita laborum
+              nobis laudantium doloremque? Autem, aspernatur.
+            </div>
+
+            <div className="read-more-div-review">
+              <a href="#">Read More..</a>
+              <motion.div
+                whileHover={{ x: 20 }}
+                className="divider-div"
+              ></motion.div>
+            </div>
           </div>
           <div className="card-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga,
-            mollitia? Nulla sit ipsam dolore quisquam possimus sunt, optio iure
-            iusto molestiae magni perspiciatis nihil ab fugiat nostrum, officia
-            tempora. Fuga.
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis doloribus, nam, modi dolor voluptatem odio beatae quod
+              dolorem cupiditate fuga tenetur recusandae error, expedita laborum
+              nobis laudantium doloremque? Autem, aspernatur.
+            </div>
+            <div className="read-more-div-review">
+              <a href="#">Read More..</a>
+              <motion.div
+                whileHover={{ x: 20 }}
+                className="divider-div"
+              ></motion.div>
+            </div>
           </div>
         </div>
       </div>

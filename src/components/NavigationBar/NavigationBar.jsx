@@ -1,13 +1,13 @@
-import './NavigationBar.scss';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import "./NavigationBar.scss";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 // import { RxHamburgerMenu as OpenMenu } from 'react-icons/rx';
 // import { CgClose as HideMenu } from 'react-icons/cg';
-import { UserOutlined, LockOutlined, SettingOutlined } from '@ant-design/icons';
-import DropDown from '../Component/Dropdown/DropDown';
-import { useNavigate } from 'react-router-dom';
-import { Avatar, Menu } from 'antd';
-import HamburgerMenu from '../Component/HamburgerMenu/HamburgerMenu';
+import { UserOutlined, LockOutlined, SettingOutlined } from "@ant-design/icons";
+import DropDown from "../Component/Dropdown/DropDown";
+import { useNavigate } from "react-router-dom";
+import { Avatar, Menu } from "antd";
+import HamburgerMenu from "../Component/HamburgerMenu/HamburgerMenu";
 //import 'antd/dist/antd.min.css';
 
 const NavigationBar = () => {
@@ -24,9 +24,9 @@ const NavigationBar = () => {
 
       window.innerWidth > 1200 && setMenuOpen(false);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -34,31 +34,31 @@ const NavigationBar = () => {
     setShowDrop(!showDrop);
   };
   const handleDoctorsScreen = () => {
-    navigate('doctors');
+    navigate("doctors");
   };
 
   const handlePackageScreen = () => {
-    navigate('packages');
+    navigate("packages");
   };
 
   const handleLocationsScreen = () => {
-    navigate('location');
+    navigate("location");
   };
 
   const handleTreatmentScreen = () => {
-    navigate('treatments');
+    navigate("treatments");
   };
 
   const handleAboutUs = () => {
-    navigate('aboutus');
+    navigate("aboutus");
   };
 
   const handleContactScreen = () => {
-    navigate('contactus');
+    navigate("contactus");
   };
 
   const handleServiceScreen = () => {
-    navigate('services');
+    navigate("services");
   };
 
   const profileData = {
@@ -276,12 +276,13 @@ const NavigationBar = () => {
             <span>PROPERTY OF DOI DOI SPA</span>
           </div>
         </div>
+
         <div className="leftSection-main">
           <div className="leftSection">
             <a
               href="/"
               target="#"
-              style={{ textDecoration: 'none', outline: 'none' }}
+              style={{ textDecoration: "none", outline: "none" }}
             >
               <div className="companyLogo">
                 <motion.img
@@ -297,7 +298,7 @@ const NavigationBar = () => {
                   whileTap={{
                     scale: 0.8,
                     rotate: -90,
-                    borderRadius: '100%',
+                    borderRadius: "100%",
                   }}
                   src="/images/doilogo.jpg"
                 />
@@ -318,22 +319,14 @@ const NavigationBar = () => {
           </div>
           <div className="rightSection">
             <div className="menuSection">
-              {/* {!menuOpen ? (
-              <OpenMenu className="menuBtn" onClick={() => setMenuOpen(true)} />
-            ) : (
-              <HideMenu
-                className="hideBtn"
-                onClick={() => setMenuOpen(false)}
-              />
-            )} */}
               {!menuOpen && (
                 <Avatar
                   shape="square"
                   size={50}
                   style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    backgroundColor: 'gray',
+                    display: "flex",
+                    justifyContent: "center",
+                    backgroundColor: "gray",
                   }}
                 >
                   <HamburgerMenu
@@ -346,7 +339,7 @@ const NavigationBar = () => {
             <div
               className="sideMenu"
               style={{
-                display: !menuListOpen || width > 1200 ? 'none' : 'flex',
+                display: !menuListOpen || width > 1200 ? "none" : "flex",
               }}
             >
               <div className="sideMenuSiteSections">

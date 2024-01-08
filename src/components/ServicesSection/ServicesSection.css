@@ -43,10 +43,9 @@
   display: flex;
   align-items: center;
   max-width: 100%;
-  padding: 0px 200px 0px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif !important;
   font-weight: 400 !important;
-  font-size: 0.8333333333vw;
+  font-size: 10px;
   line-height: 25px;
   letter-spacing: 0px;
   text-transform: none;
@@ -119,6 +118,7 @@
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .title-div-header {
@@ -150,6 +150,12 @@
     margin-top: 0px;
     flex-direction: column;
   }
+  .mottoSubtitle {
+    padding: 10px;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
   .serviceText {
     display: flex;
     align-items: center;
@@ -160,12 +166,30 @@
     flex-direction: column;
     gap: 10px;
   }
+  .service-img-div {
+    display: flex;
+    align-items: center;
+  }
   .service-img {
-    position: relative;
+    position: static;
     left: 210px;
   }
+  .read-more-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 400px) {
+  .service-img {
+    position: relative;
+    left: 5px;
+    height: 320px;
+    width: 320px;
+  }
+}
+@media screen and (max-width: 320px) {
   .serviceSection {
     padding: 15px;
   }
@@ -179,9 +203,33 @@
     flex-direction: column;
     gap: 10px;
   }
+  .service-img-div {
+    display: flex;
+    align-items: center;
+  }
   .service-img {
     position: relative;
-    left: 100px;
+    left: 5px;
+    height: 300px;
+    width: 300px;
+  }
+  .read-more-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+  .mottoSubtitle {
+    padding: 10px;
+    font-family: "Nunito", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 10px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #2e2e2e;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 
