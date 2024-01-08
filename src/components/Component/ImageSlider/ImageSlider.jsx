@@ -1,17 +1,17 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation, Zoom } from 'swiper/modules';
-import './ImageSider.css';
-import 'swiper/css/zoom';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation, Zoom } from "swiper/modules";
+import "./ImageSider.css";
+import "swiper/css/zoom";
 
 const ImageSlider = ({ images }) => {
   return (
     <>
       <Swiper
-        spaceBetween={25}
+        spaceBetween={50}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
@@ -21,17 +21,17 @@ const ImageSlider = ({ images }) => {
         direction="horizontal"
         pagination={{
           clickable: true,
-          type: 'bullets',
+          type: "bullets",
         }}
         zoom={true}
-        slidesPerView={2}
+        slidesPerView={3}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation, Zoom]}
         className="mySwiper"
         breakpoints={{
           320: {
             slidesPerView: 1,
-            spaceBetween: 50,
+            spaceBetween: 25,
           },
           985: {
             slidesPerView: 2,

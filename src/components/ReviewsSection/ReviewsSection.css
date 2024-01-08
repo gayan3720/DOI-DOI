@@ -1,15 +1,40 @@
 .reviewsSection {
-  padding: 50px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  background-color: #ebd9cd;
+  min-height: 120vh;
 }
 
 .reviewTextSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-direction: column;
+}
+.reviewTextSection .img-div-aboutRight {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.reviewTextSection .img-div-aboutRight img {
+  border-radius: 50%;
+}
+
+.header {
+  max-width: 600px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: -0.325px;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .reviewSectionTitle {
@@ -29,9 +54,38 @@
 
 .allReviews {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 1.5rem;
   justify-content: center;
+  align-items: center;
+}
+
+.left-section {
+  flex: 1.2;
+  width: 50%;
+}
+.left-section .therapy-image {
+  height: 525px;
+  width: 100%;
+}
+
+.right-section {
+  width: 50%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background-color: #d4b2a7;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 148px;
 }
 
 .review {
@@ -39,8 +93,6 @@
   flex-direction: row;
   gap: 1rem;
   padding: 10px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   max-width: 450px;
   border-radius: 15px;
@@ -68,7 +120,35 @@
   font-size: x-large;
 }
 
-@media screen and (max-width: 500px) {
+.read-more-div-review {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.read-more-div-review a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.divider-div {
+  height: 5px;
+  width: 100px;
+  background-color: orange;
+}
+
+@media screen and (max-width: 600px) {
+  .allReviews {
+    flex-direction: column;
+  }
+  .allReviews .left-section {
+    width: 80%;
+  }
+  .allReviews .right-section {
+    width: 80%;
+  }
   .review {
     flex-direction: column;
   }
@@ -78,4 +158,57 @@
   .reviewText {
     text-align: center;
   }
-}/*# sourceMappingURL=ReviewsSection.css.map */
+  .therapy-image {
+    height: 525px;
+  }
+  .card-description {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .review {
+    flex-direction: column;
+  }
+  .profilePic {
+    justify-content: center;
+  }
+  .reviewText {
+    text-align: center;
+  }
+  .img-div-aboutRight span {
+    text-align: center;
+    line-height: 20px;
+  }
+  .card-description {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .img-div-aboutRight .header {
+    text-align: center;
+    line-height: 20px;
+  }
+  .left-section .therapy-image {
+    height: 300px;
+    width: 100%;
+  }
+  .card-description {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .review {
+    flex-direction: column;
+  }
+  .profilePic {
+    justify-content: center;
+  }
+  .reviewText {
+    text-align: center;
+  }
+  .card-description {
+    gap: 25px;
+  }
+}
+
+/*# sourceMappingURL=ReviewsSection.css.map */

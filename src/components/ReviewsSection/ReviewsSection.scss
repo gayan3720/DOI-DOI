@@ -1,5 +1,5 @@
 .reviewsSection {
-  padding: 0;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -12,11 +12,14 @@
   flex-direction: column;
   justify-content: center;
   flex-direction: column;
+
   .img-div-aboutRight {
     display: flex !important;
     flex-direction: column !important;
     height: auto;
     align-items: center;
+    gap: 10px;
+    margin-top: 10px;
     img {
       border-radius: 50%;
     }
@@ -24,7 +27,7 @@
 }
 .header {
   max-width: 600px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 38px;
@@ -54,9 +57,10 @@
   align-items: center;
 }
 .left-section {
-  flex: 1;
+  flex: 1.2;
   width: 50%;
-  img {
+  .therapy-image {
+    height: 525px;
     width: 100%;
   }
 }
@@ -66,12 +70,16 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-bottom: 10px;
 }
 .card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   background-color: #d4b2a7;
   padding: 10px;
   border-radius: 10px;
-  min-height: 120px;
+  min-height: 148px;
 }
 .review {
   display: flex;
@@ -100,9 +108,37 @@
   font-weight: bold;
   font-size: x-large;
 }
+.read-more-div-review {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+
+  a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+.divider-div {
+  height: 5px;
+  width: 100px;
+  background-color: orange;
+}
 
 //MEDIA QUERIES
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 600px) {
+  .allReviews {
+    flex-direction: column;
+    .left-section {
+      width: 80%;
+    }
+    .right-section {
+      width: 80%;
+    }
+  }
   .review {
     flex-direction: column;
   }
@@ -111,5 +147,62 @@
   }
   .reviewText {
     text-align: center;
+  }
+  .therapy-image {
+    height: 525px;
+  }
+  .card-description {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .review {
+    flex-direction: column;
+  }
+  .profilePic {
+    justify-content: center;
+  }
+  .reviewText {
+    text-align: center;
+  }
+  .img-div-aboutRight {
+    span {
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+  .card-description {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .img-div-aboutRight {
+    .header {
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+  .left-section {
+    .therapy-image {
+      height: 300px;
+      width: 100%;
+    }
+  }
+  .card-description {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .review {
+    flex-direction: column;
+  }
+  .profilePic {
+    justify-content: center;
+  }
+  .reviewText {
+    text-align: center;
+  }
+  .card-description {
+    gap: 25px;
   }
 }
