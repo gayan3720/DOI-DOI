@@ -1,12 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-body,
+body {
+  margin: 0;
+}
 html {
   margin: 0;
+  padding: 0;
   background-color: #ebd9cd;
   overflow: scroll;
 }
 
 .App {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
